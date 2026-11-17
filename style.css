@@ -1,0 +1,353 @@
+/* ==============================
+   NEXORA — Feuille de style
+   ============================== */
+
+/* 1. Configuration générale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1020;
+    color: #ffffff;
+}
+
+/* 2. Navigation */
+.logo {
+    color: #ffffff !important;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #8065ff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #c5c8d4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8065ff;
+}
+
+.nav-button {
+    border-radius: 25px;
+    padding: 10px 22px;
+}
+
+.btn-primary {
+    background-color: #7658f5;
+    border-color: #7658f5;
+}
+
+.btn-primary:hover {
+    background-color: #6042df;
+    border-color: #6042df;
+}
+
+/* 3. Section principale : Flexbox */
+.hero {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.hero-content,
+.hero-visual {
+    flex: 1;
+}
+
+.hero-tag {
+    color: #9a85ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: bold;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #917aff;
+}
+
+.hero-description {
+    color: #b7bdce;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 530px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.visual-card {
+    width: 100%;
+    max-width: 430px;
+    background: #171e35;
+    border: 1px solid #303957;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 20px 60px rgba(91, 65, 200, 0.2);
+}
+
+.visual-top {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    background: #8065ff;
+    border-radius: 50%;
+}
+
+.dot:nth-child(2) {
+    background: #54d6a0;
+}
+
+.dot:nth-child(3) {
+    background: #f3bd60;
+}
+
+.code-content {
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+.code-content p {
+    margin-bottom: 0;
+}
+
+.indent {
+    padding-left: 20px;
+}
+
+.code-purple {
+    color: #b39aff;
+}
+
+.code-green {
+    color: #72dfb1;
+}
+
+.code-comment {
+    color: #8490aa;
+}
+
+/* 4. Section fonctionnalités : CSS Grid */
+.features-section {
+    background-color: #11182b;
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #aeb6c9;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background-color: #1a233c;
+    border: 1px solid #303957;
+    border-radius: 15px;
+    padding: 35px 28px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #8065ff;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #30265e;
+    color: #b39aff;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #b7bdce;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* 5. Section à propos */
+.about-section {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.about-section h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #b7bdce;
+    line-height: 1.8;
+}
+
+/* 6. Pied de page */
+footer {
+    background-color: #070b16;
+    padding: 35px 0;
+    border-top: 1px solid #252d43;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: #929bb0;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* 7. Adaptation aux tablettes */
+@media (max-width: 991px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 8. Adaptation aux téléphones */
+@media (max-width: 767px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 45px;
+        padding-bottom: 65px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .about-section h2 {
+        font-size: 28px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
